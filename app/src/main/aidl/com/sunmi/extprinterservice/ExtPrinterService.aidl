@@ -1,5 +1,5 @@
 // IPrinterService.aidl
-package woyou.aidlservice.jiuiv5;
+package com.sunmi.extprinterservice;
 
 // Declare any non-default types here with import statements
 

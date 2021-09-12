@@ -14,12 +14,11 @@ import com.example.emptyprinter.aidlutils.bean.TableItem;
 
 import java.util.LinkedList;
 
-import woyou.aidlservice.jiuiv5.ExtPrinterService;
-import woyou.aidlservice.jiuiv5.ICallback;
+import com.sunmi.extprinterservice.ExtPrinterService;
 
 public class AidlUtil {
-    private static final String SERVICE＿PACKAGE = "woyou.aidlservice.jiuiv5";
-    private static final String SERVICE＿ACTION = "woyou.aidlservice.jiuiv5.ExtPrinterService";
+    private static final String SERVICE＿PACKAGE = "com.sunmi.extprinterservice";
+    private static final String SERVICE＿ACTION = "com.sunmi.extprinterservice.ExtPrinterService";
 
     private ExtPrinterService printerService;
     private static AidlUtil mAidlUtil = new AidlUtil();
@@ -66,14 +65,6 @@ public class AidlUtil {
             printerService = ExtPrinterService.Stub.asInterface(service);
         }
     };
-
-    public ICallback generateCB(final PrinterCallback printerCallback){
-        return new ICallback.Stub(){
-            @Override
-            public void  onRunResult(boolean isSuccess, int code, String msg) throws RemoteException {
-            }
-        };
-    }
 
     public void initPrinter() {
         if (printerService == null) {
