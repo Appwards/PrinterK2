@@ -18,7 +18,7 @@ import com.sunmi.extprinterservice.ExtPrinterService;
 
 public class AidlUtil {
     private static final String SERVICE＿PACKAGE = "com.sunmi.extprinterservice";
-    private static final String SERVICE＿ACTION = "com.sunmi.extprinterservice.ExtPrinterService";
+    private static final String SERVICE＿ACTION = "com.sunmi.extprinterservice.PrinterService";
 
     private ExtPrinterService printerService;
     private static AidlUtil mAidlUtil = new AidlUtil();
